@@ -1,0 +1,35 @@
+nav2_controller:
+  ros__parameters:
+    controller_frequency: 10.0
+    min_x_velocity_threshold: 0.05
+    min_theta_velocity_threshold: 0.05
+    goal_tolerance: 0.1
+    failure_tolerance: 5.0
+
+local_costmap:
+  ros__parameters:
+    global_frame: odom
+    robot_base_frame: base_link
+    update_frequency: 5.0
+    publish_frequency: 2.0
+    resolution: 0.05
+    width: 3.0
+    height: 3.0
+    origin_x: -1.5
+    origin_y: -1.5
+    footprint: [[0.3, 0.3], [0.3, -0.3], [-0.3, -0.3], [-0.3, 0.3]]
+    obstacle_layer:
+      enabled: True
+
+global_costmap:
+  ros__parameters:
+    global_frame: map
+    robot_base_frame: base_link
+    update_frequency: 5.0
+    publish_frequency: 2.0
+    width: 10.0
+    height: 10.0
+    resolution: 0.05
+    track_unknown_space: false
+    obstacle_layer:
+      enabled: True
